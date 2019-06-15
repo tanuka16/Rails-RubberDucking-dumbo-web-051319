@@ -1,0 +1,12 @@
+
+<h1> <%= @student.name %>'s Page </h1>
+ <p>Mod: <%= @student.mod %> </p>
+
+<!-- leads to the ducks owned by 1 student -->
+<%@student.ducks.each do |duck|  %>
+  <p>Owner of: <%= link_to duck.name, duck %></p>
+<%end %>
+
+<%# <%= button_to "Add New", new_student_path %>
+<p><%= link_to "All Students", students_path %></p>
+<p><%= link_to "Edit", edit_student_path %></p>
